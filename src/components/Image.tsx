@@ -1,14 +1,5 @@
 import styled from "styled-components";
-import {LAPTOP_RESOLUTION} from "../utils/constants";
-
-export const MobileImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
-  background: white;
-`
+import {DESKTOP_MIN_RESOLUTION} from "../utils/constants";
 
 export const ImageContentContainer = styled.div`
   box-shadow: 0.2rem 0.8rem 0.6rem 0.1rem rgba(0, 0, 0, 0.25);
@@ -17,7 +8,7 @@ export const ImageContentContainer = styled.div`
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
-  @media (min-width: ${LAPTOP_RESOLUTION}px) {
+  @media (min-width: ${DESKTOP_MIN_RESOLUTION}px) {
     background-image: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgb(230 230 230 / 0%), #FFFFFF 100%);
     position: absolute;
   }
@@ -27,24 +18,10 @@ export const ImageContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  @media (min-width: ${LAPTOP_RESOLUTION}px) {
+  @media (min-width: ${DESKTOP_MIN_RESOLUTION}px) {
     height: 100%;
     margin: 0 0 2.3rem 2.8rem;
   }
-`
-
-export const ImageContainer = styled.div<{ photoUrl: any }>`
-  background-image: url(${({ photoUrl}) => photoUrl});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 0;
-  padding-bottom: 100%;
-  width: 100%;
-  border-radius: 2rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
 `
 
 export const ImageTitle = styled.a`
@@ -52,7 +29,7 @@ export const ImageTitle = styled.a`
   font-size: 2.4rem;
   font-weight: 500;
 ;
-  @media ( min-width: ${LAPTOP_RESOLUTION}px) {
+  @media ( min-width: ${DESKTOP_MIN_RESOLUTION}px) {
     font-size: 4.8rem;
     margin: 0;
   }
@@ -63,7 +40,7 @@ export const ImageSubtitle = styled.div`
   align-items: flex-start;
   margin: 1.9rem;
   font-size: 1.4rem;
-  @media (min-width: ${LAPTOP_RESOLUTION}px) {
+  @media (min-width: ${DESKTOP_MIN_RESOLUTION}px) {
     margin: 0;
     font-size: 2.4rem;
   }
@@ -81,7 +58,7 @@ export const ImageSubtitleDataContent = styled.p`
   text-overflow: ellipsis;
   max-width: 30.7rem;
   overflow: hidden;
-  @media (min-width: ${LAPTOP_RESOLUTION}px) {
+  @media (min-width: ${DESKTOP_MIN_RESOLUTION}px) {
     margin: 0 1.5rem 0 2.9rem;
     font-size: 3.6rem;
   }

@@ -1,1 +1,1 @@
-export const LAPTOP_RESOLUTION = 1024
+export const DESKTOP_MIN_RESOLUTION = 1024

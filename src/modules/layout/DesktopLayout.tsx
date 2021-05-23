@@ -1,5 +1,5 @@
+import {DesktopLayoutContainer} from '../../components/Layout'
 import {
-    ImageContainer,
     ImageContent,
     ImageContentContainer,
     ImageLink,
@@ -14,11 +14,11 @@ interface IDesktopLayout {
     username: string;
     name: string;
     createdFormattedDate: string;
-};
+}
 
 export const DesktopLayout = ({ photoUrl, username, name, createdFormattedDate}: IDesktopLayout) => {
     return (
-        <ImageContainer photoUrl={photoUrl}>
+        <DesktopLayoutContainer photoUrl={photoUrl}>
             <ImageContentContainer>
                 <ImageContent>
                     <ImageTitle>Description</ImageTitle>
@@ -38,6 +38,6 @@ export const DesktopLayout = ({ photoUrl, username, name, createdFormattedDate}:
                     </ImageSubtitle>
                 </ImageContent>
             </ImageContentContainer>
-        </ImageContainer>
+        </DesktopLayoutContainer>
     );
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {LAPTOP_RESOLUTION} from "../utils/constants";
+import {DESKTOP_MIN_RESOLUTION} from "../utils/constants";
 
 export const PhotosContainer = styled.div`
   display: grid;
@@ -8,7 +8,7 @@ export const PhotosContainer = styled.div`
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   padding: 1rem;
-  @media (min-width: ${LAPTOP_RESOLUTION}px) {
+  @media (min-width: ${DESKTOP_MIN_RESOLUTION}px) {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 `;

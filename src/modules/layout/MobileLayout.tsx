@@ -1,3 +1,4 @@
+import {MobileLayoutContainer} from '../../components/Layout'
 import {
     ImageContent,
     ImageContentContainer,
@@ -6,7 +7,6 @@ import {
     ImageSubtitleDataContent,
     ImageSubtitleExtraContent,
     ImageTitle,
-    MobileImageContainer
 } from "../../components/Image";
 
 interface IMobileLayout {
@@ -14,14 +14,14 @@ interface IMobileLayout {
     username: string;
     name: string;
     createdFormattedDate: string;
-};
+}
 
 export const MobileLayout = ({ photoUrl, username, name, createdFormattedDate}: IMobileLayout) => {
     return (
-        <MobileImageContainer>
+        <MobileLayoutContainer>
             <ImageContentContainer>
                 <ImageTitle>Description</ImageTitle>
-                <img src={photoUrl} alt="test"/>
+                <img src={photoUrl} alt="random test which can be alt"/>
                 <ImageContent>
                     <ImageSubtitle>
                         <ImageSubtitleExtraContent>
@@ -39,6 +39,6 @@ export const MobileLayout = ({ photoUrl, username, name, createdFormattedDate}: 
                     </ImageSubtitle>
                 </ImageContent>
             </ImageContentContainer>
-        </MobileImageContainer>
+        </MobileLayoutContainer>
     );
 };

@@ -1,13 +1,12 @@
 import {useEffect, useState} from "react";
 
-import {ApiResponse} from "./types/ApiResponse";
-import {Photos} from "./types/Photos";
-
 import {Photo} from "./Photo";
 import {PhotosContainer} from "./components/PhotosContainer";
 import {Spinner} from "./components/Spinner";
 import {PhotosError} from "./components/PhotosError";
 import {api} from "./utils/unsplashApiDetails";
+import {ApiResponse} from "unsplash-js/dist/helpers/response";
+import {Photos} from "unsplash-js/dist/methods/search/types/response";
 
 export const Overview = () => {
     const [photosResponse, setPhotosResponse] = useState<ApiResponse<Photos> | null>(null);
