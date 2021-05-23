@@ -1,0 +1,1 @@
+export const LAPTOP_RESOLUTION = 1024
